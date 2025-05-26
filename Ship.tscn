@@ -1,14 +1,14 @@
 [gd_scene load_steps=6 format=3 uid="uid://dnxnqulkqvt74"]
 
 [ext_resource type="Script" uid="uid://c8bmbhwdxm3yg" path="res://ship.gd" id="1_h40nn"]
-[ext_resource type="Texture2D" uid="uid://xqj6grobi0jk" path="res://art/Ship.png" id="1_xljvd"]
 [ext_resource type="PackedScene" uid="uid://qgrpwhusecoi" path="res://bullet.tscn" id="2_oam5h"]
+[ext_resource type="Texture2D" uid="uid://px7sjkf87jtd" path="res://art/Prototype Player.png" id="3_ix3uc"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_k24tq"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_xljvd")
+"texture": ExtResource("3_ix3uc")
 }],
 "loop": true,
 "name": &"Idle",
