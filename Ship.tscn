@@ -32,7 +32,7 @@ position = Vector2(0.5, -0.5)
 shape = SubResource("RectangleShape2D_h40nn")
 
 [node name="Chamber" type="Marker2D" parent="."]
-position = Vector2(100, 49)
+position = Vector2(50, 25)
 gizmo_extents = 0.0
 
 [node name="Timer" type="Timer" parent="."]
