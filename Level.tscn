@@ -9,6 +9,6 @@
 [node name="Level 1" type="ParallaxLayer" parent="Level Background"]
 
 [node name="Sprite2D" type="Sprite2D" parent="Level Background/Level 1"]
-position = Vector2(871, 100)
+position = Vector2(1218, 361)
 scale = Vector2(3.701, 3.374)
 texture = ExtResource("1_bexhn")
