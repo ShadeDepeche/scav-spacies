@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1x5xkgvksg3a"]
+
+[ext_resource type="Texture2D" uid="uid://cp3ytelexhr36" path="res://art/Proto-Level.png" id="1_bexhn"]
+
+[node name="Level" type="CanvasLayer"]
+
+[node name="Level Background" type="ParallaxBackground" parent="."]
+
+[node name="Level 1" type="ParallaxLayer" parent="Level Background"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Level Background/Level 1"]
+position = Vector2(871, 100)
+scale = Vector2(3.701, 3.374)
+texture = ExtResource("1_bexhn")

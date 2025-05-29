@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Scav Spacies"
-run/main_scene="uid://dnxnqulkqvt74"
+run/main_scene="uid://cbsp0511bamrx"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
