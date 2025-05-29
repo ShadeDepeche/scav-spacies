@@ -15,8 +15,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_h40nn"]
-size = Vector2(209, 107)
+[sub_resource type="CircleShape2D" id="CircleShape2D_oam5h"]
 
 [node name="Ship" type="Area2D"]
 script = ExtResource("1_h40nn")
@@ -28,8 +27,11 @@ sprite_frames = SubResource("SpriteFrames_k24tq")
 animation = &"Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, -0.5)
-shape = SubResource("RectangleShape2D_h40nn")
+position = Vector2(-5, 4)
+rotation = 0.172788
+scale = Vector2(6.285, 3.4)
+skew = -0.15708
+shape = SubResource("CircleShape2D_oam5h")
 
 [node name="Chamber" type="Marker2D" parent="."]
 position = Vector2(50, 25)
