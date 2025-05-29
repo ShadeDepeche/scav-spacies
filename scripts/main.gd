@@ -4,8 +4,8 @@ extends Node2D
 @export var Level : PackedScene
 
 func _ready():
-	Ship = load("res://Ship.tscn")
-	Level = load("res://Level.tscn")
+	Ship = load("res://scenes/Ship.tscn")
+	Level = load("res://scenes/Level.tscn")
 	start_game()
 
 func start_game():
