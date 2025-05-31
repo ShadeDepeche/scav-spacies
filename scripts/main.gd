@@ -5,7 +5,7 @@ extends Node2D
 
 func _ready():
 	Ship = load("res://scenes/Ship.tscn")
-	Level = load("res://scenes/Level.tscn")
+	Level = load("res://scenes/levels/Level.tscn")
 	start_game()
 
 func start_game():

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1x5xkgvksg3a"]
+
+[ext_resource type="Script" uid="uid://csk0c7cq1dho7" path="res://scripts/level_1.gd" id="1_k3rtj"]
+[ext_resource type="Texture2D" uid="uid://cp3ytelexhr36" path="res://art/Proto-Level.png" id="2_p0fye"]
+
+[node name="Level" type="CanvasLayer"]
+
+[node name="Level Background" type="ParallaxBackground" parent="."]
+
+[node name="Level 1" type="ParallaxLayer" parent="Level Background"]
+motion_scale = Vector2(0.5, 0.5)
+script = ExtResource("1_k3rtj")
+
+[node name="Sprite2D" type="Sprite2D" parent="Level Background/Level 1"]
+position = Vector2(1219.74, 359.665)
+scale = Vector2(3.70179, 3.38653)
+texture = ExtResource("2_p0fye")
