@@ -1,28 +1,28 @@
-[gd_scene load_steps=4 format=3 uid="uid://bx6d8kmke27c8"]
+[gd_scene load_steps=4 format=3 uid="uid://6rq83qlnkrbe"]
 
-[ext_resource type="Texture2D" uid="uid://ckup7t28dvbdb" path="res://art/debris/Debris_Small_1.png" id="1_ro7ys"]
+[ext_resource type="Texture2D" uid="uid://cfjr2esvm45xw" path="res://art/debris/Debris_Small_3.png" id="1_npj4y"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jlk0v"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_ro7ys")
+"texture": ExtResource("1_npj4y")
 }],
 "loop": true,
-"name": &"Small 1",
+"name": &"Small 3",
 "speed": 5.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lm2le"]
-radius = 42.0
-height = 156.0
+radius = 50.547
+height = 155.161
 
-[node name="Debris" type="Area2D"]
+[node name="Small Debris 3" type="Area2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_jlk0v")
-animation = &"Small 1"
+animation = &"Small 3"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-rotation = 1.5708
+rotation = 2.18166
 shape = SubResource("CapsuleShape2D_lm2le")
