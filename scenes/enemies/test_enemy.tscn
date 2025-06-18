@@ -1,0 +1,76 @@
+[gd_scene load_steps=11 format=3 uid="uid://bx6d8kmke27c8"]
+
+[ext_resource type="Script" uid="uid://b0j84exclfs7l" path="res://scripts/enemy.gd" id="1_kmxma"]
+[ext_resource type="Texture2D" uid="uid://bb1h45o1x2a8m" path="res://art/enemies/Enemy Circle.png" id="1_pnhpx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kmxma"]
+atlas = ExtResource("1_pnhpx")
+region = Rect2(430, 0, 215, 126)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o4mit"]
+atlas = ExtResource("1_pnhpx")
+region = Rect2(0, 126, 215, 126)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tf3a8"]
+atlas = ExtResource("1_pnhpx")
+region = Rect2(215, 126, 215, 126)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ybkn"]
+atlas = ExtResource("1_pnhpx")
+region = Rect2(430, 126, 215, 126)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_asbfj"]
+atlas = ExtResource("1_pnhpx")
+region = Rect2(0, 0, 215, 126)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_frcvx"]
+atlas = ExtResource("1_pnhpx")
+region = Rect2(215, 0, 215, 126)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jlk0v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kmxma")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o4mit")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tf3a8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ybkn")
+}],
+"loop": true,
+"name": &"Boom",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_asbfj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_frcvx")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lm2le"]
+radius = 57.0
+height = 184.0
+
+[node name="enemy" type="Area2D"]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_kmxma")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_jlk0v")
+animation = &"Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_lm2le")

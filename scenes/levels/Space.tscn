@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3efw7y44coip"]
+
+[ext_resource type="PackedScene" uid="uid://dnxnqulkqvt74" path="res://scenes/player/Ship.tscn" id="1_r6ysf"]
+[ext_resource type="PackedScene" uid="uid://bx6d8kmke27c8" path="res://scenes/enemies/test_enemy.tscn" id="2_qburk"]
+
+[node name="Space" type="Node2D"]
+
+[node name="Ship" parent="." instance=ExtResource("1_r6ysf")]
+position = Vector2(959, 535)
+
+[node name="enemy" parent="." instance=ExtResource("2_qburk")]
+position = Vector2(1576, 455)
