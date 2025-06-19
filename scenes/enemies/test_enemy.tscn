@@ -62,15 +62,24 @@ animations = [{
 radius = 57.0
 height = 184.0
 
-[node name="enemy" type="Area2D"]
-collision_layer = 2
+[node name="enemy" type="RigidBody2D"]
 collision_mask = 0
+gravity_scale = 0.0
 script = ExtResource("1_kmxma")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_jlk0v")
 animation = &"Idle"
+frame_progress = 0.0164956
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_lm2le")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="Chamber" type="Marker2D" parent="."]
+position = Vector2(-93, 2)
