@@ -35,15 +35,10 @@ func _process(delta):
 		var cam_rect = get_camera_visible_rect(camera)
 		global_position = global_position.clamp(cam_rect.position, cam_rect.position + cam_rect.size)
 
-
-func _on_hit() -> void:
-	pass # Replace with function body.
-
-func _on_body_entered(_body):
-	hide() # Player disappears after being hit.
-	hit.emit()
-	# Must be deferred as we can't change physics properties on a physics callback.
-	$CollisionShape2D.set_deferred("disabled", true)
+func _on_hit():
+	$AnimatedSprite2D.play("Boom")
+	await get_tree().create_timer(0.4).timeout
+	queue_free()
 
 func start(pos):
 	position = pos
