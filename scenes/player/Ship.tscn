@@ -64,7 +64,7 @@ animations = [{
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oam5h"]
 
-[node name="Ship" type="Area2D"]
+[node name="Ship" type="CharacterBody2D"]
 collision_mask = 2
 script = ExtResource("1_isuug")
 Bullet = ExtResource("2_tkkry")
@@ -72,7 +72,7 @@ Bullet = ExtResource("2_tkkry")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_k24tq")
-animation = &"Boom"
+animation = &"Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-5, 4)
@@ -89,5 +89,3 @@ gizmo_extents = 0.0
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.25
 one_shot = true
-
-[connection signal="hit" from="." to="." method="_on_hit"]

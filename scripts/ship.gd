@@ -1,4 +1,4 @@
-extends Area2D
+extends CharacterBody2D
 signal hit
 
 @export var speed = 400
@@ -6,8 +6,8 @@ var screen_size
 
 @export var Bullet : PackedScene
 
-#func _ready():
-	#screen_size = get_viewport_rect().size
+func _ready():
+	$AnimatedSprite2D.play("Idle")
 
 func _process(delta):
 	var velocity = Vector2.ZERO # The player's movement vector.
@@ -51,6 +51,7 @@ func shoot():
 	$Timer.start()
 
 func get_camera_visible_rect(camera: Camera2D) -> Rect2:
+	#Adjust the limit the player touches the corner of the camera viewport.
 	var screen_size = get_viewport().get_visible_rect().size /1.1
 	var half_screen = screen_size * 0.5
 	var top_left = camera.global_position - half_screen

@@ -18,7 +18,8 @@ animations = [{
 }]
 
 [node name="Bullet" type="Area2D"]
-collision_layer = 2
+collision_layer = 0
+collision_mask = 2
 script = ExtResource("1_v8qja")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -29,4 +30,4 @@ shape = SubResource("RectangleShape2D_v8qja")
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_t4vbm")
 
-[connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

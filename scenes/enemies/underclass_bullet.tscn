@@ -19,7 +19,7 @@ animations = [{
 
 [node name="enemy bullet" type="Area2D"]
 texture_filter = 1
-collision_mask = 0
+collision_layer = 0
 script = ExtResource("1_kj1r5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -29,3 +29,5 @@ shape = SubResource("RectangleShape2D_168i2")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 self_modulate = Color(14.364, 1.93122, 0, 1)
 sprite_frames = SubResource("SpriteFrames_ysnkl")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -5,7 +5,8 @@ extends CharacterBody2D
 @export var Bullet : PackedScene
 
 func _ready():
-	Bullet = load("res://scenes//enemies/enemy_bullet.tscn")
+	
+	#Bullet = load("res://scenes//enemies/enemy_bullet.tscn")
 	$AnimatedSprite2D.play("Idle")
 	
 func _process(delta):
