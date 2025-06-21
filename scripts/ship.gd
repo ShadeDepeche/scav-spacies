@@ -1,8 +1,8 @@
 extends CharacterBody2D
-signal hit
 
 @export var speed = 400
 var screen_size
+var alive = 1
 
 @export var Bullet : PackedScene
 
@@ -22,10 +22,10 @@ func _process(delta):
 	if Input.is_action_pressed("shoot") and $Timer.is_stopped():
 		shoot()
 
-	if velocity.length() > 0:
+	if velocity.length() > 0 && alive == 1:
 		velocity = velocity.normalized() * speed
 		$AnimatedSprite2D.play("Idle")
-	else:
+	elif alive == 1:
 		$AnimatedSprite2D.stop()
 		
 	position += velocity * delta
@@ -36,6 +36,7 @@ func _process(delta):
 		global_position = global_position.clamp(cam_rect.position, cam_rect.position + cam_rect.size)
 
 func _on_hit():
+	alive = 0
 	$AnimatedSprite2D.play("Boom")
 	await $AnimatedSprite2D.animation_finished
 	queue_free()
