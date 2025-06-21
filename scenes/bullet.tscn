@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://qgrpwhusecoi"]
 
-[ext_resource type="Texture2D" uid="uid://dforlhapmfclg" path="res://art/Bullet.png" id="1_v7oki"]
 [ext_resource type="Script" uid="uid://cjcemnfgw4jtn" path="res://scripts/bullet.gd" id="1_v8qja"]
+[ext_resource type="Texture2D" uid="uid://chgelprrkjkx5" path="res://art/Player Bullet.png" id="2_y25gk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v8qja"]
 size = Vector2(43, 19)
@@ -10,7 +10,7 @@ size = Vector2(43, 19)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_v7oki")
+"texture": ExtResource("2_y25gk")
 }],
 "loop": true,
 "name": &"default",
@@ -27,4 +27,5 @@ position = Vector2(1.5, -0.5)
 shape = SubResource("RectangleShape2D_v8qja")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_t4vbm")

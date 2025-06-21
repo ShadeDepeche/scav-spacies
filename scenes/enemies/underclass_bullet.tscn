@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://buw48pbn5bhkn"]
+[gd_scene load_steps=5 format=3 uid="uid://bfykb020luqsf"]
 
-[ext_resource type="Script" uid="uid://binngj6dx1nn" path="res://scripts/enemy_bullet.gd" id="1_8gdk0"]
-[ext_resource type="Texture2D" uid="uid://cvbf7hqwbc0da" path="res://art/enemies/Purple Bullet.png" id="2_8gdk0"]
+[ext_resource type="Script" uid="uid://binngj6dx1nn" path="res://scripts/enemy_bullet.gd" id="1_kj1r5"]
+[ext_resource type="Texture2D" uid="uid://cvbf7hqwbc0da" path="res://art/enemies/Purple Bullet.png" id="2_71vy6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_168i2"]
 size = Vector2(45, 20)
@@ -10,7 +10,7 @@ size = Vector2(45, 20)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_8gdk0")
+"texture": ExtResource("2_71vy6")
 }],
 "loop": true,
 "name": &"default",
@@ -20,11 +20,12 @@ animations = [{
 [node name="enemy bullet" type="Area2D"]
 texture_filter = 1
 collision_mask = 0
-script = ExtResource("1_8gdk0")
+script = ExtResource("1_kj1r5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_168i2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+self_modulate = Color(14.364, 1.93122, 0, 1)
 sprite_frames = SubResource("SpriteFrames_ysnkl")

@@ -1,11 +1,12 @@
-extends RigidBody2D
+extends CharacterBody2D
 
 @export var health: int = 2
 @export var speed = 250
 @export var Bullet : PackedScene
 
 func _ready():
-	Bullet = load("res://scenes//enemies/enemy_bullet.tscn")
+	if Bullet == null:
+		Bullet = load("res://scenes//enemies/enemy_bullet.tscn")
 	$AnimatedSprite2D.play("Idle")
 	
 func _process(_delta):

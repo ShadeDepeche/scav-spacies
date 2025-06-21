@@ -19,7 +19,14 @@ config/icon="res://icon.svg"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/size/mode=3
 window/stretch/mode="canvas_items"
+
+[editor]
+
+movie_writer/movie_file="F:/Projects/Godot/Movies/Space Test.avi"
+movie_writer/size/mode=3
+movie_writer/stretch/scale=1.0
 
 [input]
 

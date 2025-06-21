@@ -1,14 +1,61 @@
-[gd_scene load_steps=6 format=3 uid="uid://dnxnqulkqvt74"]
+[gd_scene load_steps=12 format=3 uid="uid://dnxnqulkqvt74"]
 
 [ext_resource type="Script" uid="uid://c8bmbhwdxm3yg" path="res://scripts/ship.gd" id="1_isuug"]
 [ext_resource type="PackedScene" uid="uid://qgrpwhusecoi" path="res://scenes/bullet.tscn" id="2_tkkry"]
-[ext_resource type="Texture2D" uid="uid://px7sjkf87jtd" path="res://art/Prototype Player.png" id="3_ilism"]
+[ext_resource type="Texture2D" uid="uid://bh5edqfka3x31" path="res://art/Player Ship.png" id="4_tkkry"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_isuug"]
+atlas = ExtResource("4_tkkry")
+region = Rect2(430, 0, 215, 126)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tkkry"]
+atlas = ExtResource("4_tkkry")
+region = Rect2(0, 126, 215, 126)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_20l8i"]
+atlas = ExtResource("4_tkkry")
+region = Rect2(215, 126, 215, 126)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_milcu"]
+atlas = ExtResource("4_tkkry")
+region = Rect2(430, 126, 215, 126)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ilism"]
+atlas = ExtResource("4_tkkry")
+region = Rect2(0, 0, 215, 126)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_14omk"]
+atlas = ExtResource("4_tkkry")
+region = Rect2(215, 0, 215, 126)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_k24tq"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_ilism")
+"texture": SubResource("AtlasTexture_isuug")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tkkry")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_20l8i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_milcu")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"Boom",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ilism")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_14omk")
 }],
 "loop": true,
 "name": &"Idle",

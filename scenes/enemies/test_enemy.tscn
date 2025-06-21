@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://bx6d8kmke27c8"]
+[gd_scene load_steps=12 format=3 uid="uid://bx6d8kmke27c8"]
 
 [ext_resource type="Script" uid="uid://b0j84exclfs7l" path="res://scripts/enemy.gd" id="1_kmxma"]
 [ext_resource type="Texture2D" uid="uid://bb1h45o1x2a8m" path="res://art/enemies/Enemy Circle.png" id="1_pnhpx"]
+[ext_resource type="PackedScene" uid="uid://buw48pbn5bhkn" path="res://scenes/enemies/enemy_bullet.tscn" id="2_o4mit"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kmxma"]
 atlas = ExtResource("1_pnhpx")
@@ -62,10 +63,10 @@ animations = [{
 radius = 57.0
 height = 184.0
 
-[node name="enemy" type="RigidBody2D"]
+[node name="enemy" type="CharacterBody2D"]
 collision_mask = 2
-gravity_scale = 0.0
 script = ExtResource("1_kmxma")
+Bullet = ExtResource("2_o4mit")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_jlk0v")

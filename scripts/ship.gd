@@ -6,8 +6,8 @@ var screen_size
 
 @export var Bullet : PackedScene
 
-func _ready():
-	screen_size = get_viewport_rect().size
+#func _ready():
+	#screen_size = get_viewport_rect().size
 
 func _process(delta):
 	var velocity = Vector2.ZERO # The player's movement vector.
@@ -24,12 +24,16 @@ func _process(delta):
 
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
-		$AnimatedSprite2D.play()
+		$AnimatedSprite2D.play("Idle")
 	else:
 		$AnimatedSprite2D.stop()
 		
 	position += velocity * delta
-	position = position.clamp(Vector2.ZERO, screen_size)
+	#position = position.clamp(Vector2.ZERO, screen_size)
+	var camera = get_viewport().get_camera_2d()
+	if camera:
+		var cam_rect = get_camera_visible_rect(camera)
+		global_position = global_position.clamp(cam_rect.position, cam_rect.position + cam_rect.size)
 
 
 func _on_hit() -> void:
@@ -51,3 +55,9 @@ func shoot():
 	get_tree().root.add_child(b)
 	b.global_transform = $Chamber.global_transform
 	$Timer.start()
+
+func get_camera_visible_rect(camera: Camera2D) -> Rect2:
+	var screen_size = get_viewport().get_visible_rect().size /1.1
+	var half_screen = screen_size * 0.5
+	var top_left = camera.global_position - half_screen
+	return Rect2(top_left, screen_size)
