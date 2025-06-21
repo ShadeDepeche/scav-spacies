@@ -16,7 +16,7 @@ func _on_hit():
 	health -= 1
 	if health == 0:
 		$AnimatedSprite2D.play("Boom")
-		await get_tree().create_timer(0.4).timeout
+		await $AnimatedSprite2D.animation_finished
 		queue_free()
 		
 func shoot():

@@ -43,7 +43,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_t5y25")
 }],
-"loop": true,
+"loop": false,
 "name": &"Boom",
 "speed": 8.0
 }, {
@@ -72,7 +72,7 @@ Bullet = ExtResource("2_xuiyw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_jlk0v")
-animation = &"Idle"
+animation = &"Boom"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 1.5708

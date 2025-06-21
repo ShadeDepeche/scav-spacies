@@ -18,6 +18,7 @@ animations = [{
 }]
 
 [node name="enemy bullet" type="Area2D"]
+collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_8gdk0")
 

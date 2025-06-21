@@ -37,13 +37,12 @@ func _process(delta):
 
 func _on_hit():
 	$AnimatedSprite2D.play("Boom")
-	await get_tree().create_timer(0.4).timeout
+	await $AnimatedSprite2D.animation_finished
 	queue_free()
 
 func start(pos):
 	position = pos
 	show()
-	$CollisionShape2D.disabled = false
 
 func shoot():
 	var b = Bullet.instantiate()
